@@ -33,7 +33,8 @@ ${answers.usage}
 
 ## License
 
-![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen?style=for-the-badge)
+[![License: ${answers.license}](https://img.shields.io/badge/License-${answers.license}-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/${answers.license})
+
 <br>
 This application is covered by the ${answers.license} license.
 <br>

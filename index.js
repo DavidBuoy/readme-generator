@@ -1,13 +1,12 @@
-// TODO: Include packages needed for this application
+
 // External Package
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util')
 
 // Internal Package
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+
 const questions = () =>
     inquirer.prompt([
         {
@@ -19,7 +18,7 @@ const questions = () =>
         {
             type: 'input',
             name: 'github',
-            message: 'What is your GitHub user name?',
+            message: 'What is your GitHub user name? (PLEASE DO NOT INCLUDE URL - NAME ONLY - )',
         },
         {
             type: 'input',
@@ -60,16 +59,16 @@ const questions = () =>
 
     ]);
 
-// TODO: Create a function to write README file
+
 
 const init = () => {
     questions().then((answers) => {
         try {
             const md = generateMarkdown(answers);
             
-            fs.writeFileSync('README.md', md);
+            fs.writeFileSync('README_GENERATOR.md', md);
             
-            console.log('Successfully wrote to README.md');
+            console.log('Successfully wrote to README_GENERATOR.md');
         }
         catch (error) {
             console.log(error);
@@ -77,7 +76,5 @@ const init = () => {
     });
 };
 
-// TODO: Create a function to write README file
 
-// Function call to initialize app
 init();
