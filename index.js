@@ -66,9 +66,9 @@ const init = () => {
         try {
             const md = generateMarkdown(answers);
             
-            fs.writeFileSync('README_GENERATOR.md', md);
+            fs.writeFileSync('README.md', md);
             
-            console.log('Successfully wrote to README_GENERATOR.md');
+            console.log('Successfully wrote to README.md');
         }
         catch (error) {
             console.log(error);
